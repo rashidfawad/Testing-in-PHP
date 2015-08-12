@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <style>
+
+
+        .html
+        {
+            background-color: #FFFFFF;
+        }
+
+        body
+        {
+            margin: 0;
+            padding:0;
+            min-height: 700px;
+        }
+
+        .header
+        {
+            width: 80%;
+            margin:auto;
+            padding:0;
+            display:flex;
+        }
+
+        #banner
+        {
+            height: 200px;
+            width: 80%;
+            background-color: #EEEEEE;
+        }
+
+        #navbar
+        {
+
+            background-color: #70A5DA;
+            height: 28px;
+        }
+
+        .menu
+        {
+            list-style-type:none;
+        }
+
+        .nb_item {
+            position: relative;
+            display:inline-block;
+            width:auto;
+            padding:0px 10px;
+            color:#FFFFFF;
+            margin:auto;
+            text-align:center;
+            line-height:28px;
+        }
+
+        .nb_item:hover
+        {
+            color: #DDDDDD;
+            cursor:pointer;
+        }
+
+        #abtus_menu li
+        {
+            list-style-type:none;
+            display:none;
+
+        }
+        .nb_item:hover #abtus_menu li
+        {
+            display:block;
+            color: #DDDDDD;
+        }
+
+        #comt_menu li
+        {
+            list-style-type:none;
+            display:none;
+        }
+
+        .nb_item:hover #comt_menu li
+        {
+            display:block;
+        }
+
+
+
+        #rgstr_menu li
+        {
+            list-style-type:none;
+            display:none;
+        }
+
+        .nb_item:hover #rgstr_menu li
+        {
+            display:block;
+        }
+
+        #evnt_menu li
+        {
+            list-style-type:none;
+            display:none;
+        }
+
+        .nb_item:hover #evnt_menu li
+        {
+            display:block;
+        }
+
+
+        .menu li
+        {
+            display:inline;
+        }
+        .nb_item ul {
+            padding-left: 0;
+            position: fixed;
+            display: none;
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+        .nb_item ul li {
+            text-align: left;
+        }
+
+        .nb_item:hover ul {
+            display: block;
+        }
+
+        body {
+            padding: inherit 10%;
+        }
+        input {
+            width: 300px;
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+
+
+        #absolute{
+            position:absolute;
+            width:200px;
+            height:100%;
+            background: #a94442;
+            border:2px solid;
+            text-align:center;
+        }
+        #center{
+            width:500px;
+            height:20%;
+            margin:0 auto;
+            background: #46b8da;
+            border:2px solid;
+            text-align:center;
+        }
+
+        .fullwidth {
+            width: 100%;
+            color: #ffffff;
+            position: relative;
+            background: #3c763d;
+        }
+
+        /************************************************/
+
+
+
+
+
+
+
+
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div  class="header" id="banner"></div>
+<div class="header" id="navbar">
+    <div class="nb_item">HOME</div>
+    <div class="nb_item">ABOUT US
+        <ul id="abtus_menu">
+            <li>LA MARTINIERE COLLEGE, LUCKNOW</li>
+            <li>LA MARTINIERE MODEL UNITED NATIONS</li>
+            <li>SECRETARIAT</li>
+        </ul>
+    </div>
+    <div class="nb_item">REGISTER
+        <ul id="rgstr_menu">
+            <li>INDIVIDUAL</li>
+            <li>DELEGATION</li>
+        </ul>
+    </div>
+    <div class="nb_item">COMMITTEES
+        <ul id="comt_menu">
+            <li>COMMITTEE 1</li>
+            <li>COMMITTEE 2</li>
+            <li>COMMITTEE 3</li>
+            <li>COMMITTEE 4</li>
+            <li>COMMITTEE 5</li>
+            <li>COMMITTEE 6</li>
+        </ul>
+    </div>
+    <div class="nb_item">RESOURCES</div>
+    <div class="nb_item">EVENTS
+        <ul id="evnt_menu">
+            <li>KEYNOTE SPEAKERS</li>
+            <li>SOCIALS</li>
+        </ul>
+    </div>
+    <div class="nb_item">SPONSORS</div>
+    <div class="nb_item">CONTACT US</div>
+</div>
+
+<input type="text" name="name" id="datepicker" placeholder="datepicker">
+<div class="test">This is a test div content</div>
+
+<div class="fullwidth">
+    <div id="absolute">The absolute div</div>
+    <div id="center">The centered div</div>
+
+</div>
+
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+
+/*
+            var offset = $('input#datepicker').offset();
+            console.log("Offset " + offset.top);
+            var scrollTop_input = $('input#datepicker').scrollTop();
+            console.log("Input scroll Top " + scrollTop_input);
+            var scrollTop_window= $(document).scrollTop();
+            console.log("Window scroll top " + scrollTop_window);
+            $('div.test').scrollTop(700);
+            console.log("Test div " + $('div.test').scrollTop());
+*/
+
+
+        });
+
+
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

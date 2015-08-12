@@ -1,0 +1,45 @@
+
+section {
+    min-height: 400px;
+    background: url("../../learning/hobby/Stockholm1.jpg") center;
+    display: block;
+    float: left;
+}
+
+input[type="text"] {
+    max-width: 500px;
+    display: block;
+    clear: both;
+    margin: auto;
+}
+
+input#submit {
+    width: 250px;
+    text-align: center;
+    display: block;
+    clear: both;
+    margin: 20px auto;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    min-height: 100px;
+    background: #66512c;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

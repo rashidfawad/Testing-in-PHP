@@ -1,0 +1,112 @@
+UseLess Tests(Those tests that do not have any assertions.)
+beStrictAboutTestsThatDoNotTestAnything="true"
+--report-useless-tests
+
+----------------------------------------------------
+Unintentionally covered code. 
+
+--strict-coverage
+checkForUnintentionallyCoveredCode="true"
+--------------------------------------------------------
+Output During Test Execution. 
+
+If a print statement is found inside a test, it will be considered risky if the following args are used. 
+
+--disallow-test-output
+beStrictAboutOutputDuringTests="true"
+---------------------------------------------------------
+Time Execution Timeout
+@large annotated tests will timeout after 60 seconds. 
+@medium annotated tests will timeout after 10 seconds. 
+@small is taken by default, it timeouts after 1 second. 
+
+--enforce-time-limit
+beStrictAboutTestSize="true"----------------------------------------------------------
+
+Chapter 7# INCOMPLETE AND SKIPPED TESTS:
+$this->fail() will make the test fail.
+
+
+
+$this->markTestIncomplete('This test is yet to be implemented')
+SKIPPING TESTS: for example a DB abstraction layer has several drivers for different dbms. The tests for MYSQLi can only be run if a MYSQL server is available. 
+
+class DatabaseTest extends PHPUnit_Framework_TestCase {
+	protected function setUp() {
+		if(!extension_loaded('mysqli')) {
+			$this->markTestSkipped('The Mysqli extension is 			not available');
+		}
+	}
+
+	public function testConnection() {}
+}
+
+-----------------------------------------------------------------
+DATABASE TESTING using DbUnit
+
+Testing Database can be a daunting task especially time consuming. 
+Gerard Meszaros lists four stages of a unit-test in his book xUnit Test patterns.
+
+(1) setUp the Fixture (is the initial state our application is in when we execute a test.)
+(2) Exercuse the system under test. 
+(3) Verify Outcome
+(4) Tear Down
+
+class MyGuestBookTest extends PHPUnit_Extension_Database_TestCase {
+	public function getConnection() {
+		$pdo = new PDO('sqlite::memory');
+		return $this->createDefaultDBConnection($pdo, ':memory');
+	}
+	
+	public function getDataSet() {
+		return $this->createFlatXMLDataSet(dirname(__FILE__).'/files/xml-file-seed.xml');
+	}
+
+
+}
+
+---------------------------------------------------------
+TEST DOUBLES (Chapter 9)
+
+When we write a test in which we cannot or chose not to use a real depended-on-component (DOC), we use Test Doubles. The Test Double doesn't have to behave exactly like the SUT, it merely has to provide the API as the real one so that SUT thinks it is the real one. 
+
+getMockBuilder($type) method can be used in a test to automatically generate an object that can act as a test double for the specified interface or class. 
+will($this->returnValue()) will return a value. 
+
+STUBBING: 
+
+The practice of replacing an object with a test doble that may return a configured value is called stubbing. 
+
+-------------------------------------------------------------
+
+CODE COVERAGE (Chapter #11)
+
+Code coverage means the degre to which the source code of a program is tested. Greater code coverage means less bugs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
